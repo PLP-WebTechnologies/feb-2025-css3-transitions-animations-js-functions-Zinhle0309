@@ -1,0 +1,50 @@
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.animate-btn:hover {
+  background-color: #45a049;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #3498db;
+  margin: 20px auto;
+  display: none; /* Initially hidden */
+}
+
+.box.animate {
+  display: block;
+  animation: bounce 5s, spin 5s; /* Combine bounce and spin animations */
+}
+
+.button {
+  animation: bounce 5s infinite;
+}
